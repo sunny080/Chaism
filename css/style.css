@@ -1,0 +1,503 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "myFont";
+  src: url(../Assets/Fonts/HelveticaNeueCyr-Light.woff);
+}
+
+body {
+  background: #F5F5F5;
+  height: 300vh;
+}
+
+header {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+header .bg_img {
+  top: 0;
+  z-index: -1;
+  left: 0;
+  position: absolute;
+}
+
+header nav {
+  height: 88px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 10%;
+}
+
+header nav .logo img {
+  cursor: pointer;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+header nav ul li {
+  cursor: pointer;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-size: 16px;
+  color: #030406;
+}
+
+header nav button {
+  cursor: pointer;
+  width: 141px;
+  height: 41px;
+  background-color: #eb5a35;
+  border-radius: 21px;
+  border: none;
+  color: #fff;
+  font-family: "myFont";
+  font-size: 14px;
+  font-weight: 400;
+}
+
+header form {
+  margin-top: 113px;
+  width: 80%;
+  margin-left: 10%;
+}
+
+header form .form_section {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: safe;
+      -ms-flex-pack: safe;
+          justify-content: safe;
+  gap: 32px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header form .form_section .input_text {
+  font-weight: 400;
+  width: 181px;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid #030406;
+  background-color: transparent;
+  outline: none;
+  font-family: "Inter", sans-serif;
+}
+
+header form .form_section .input_text::-webkit-input-placeholder {
+  color: black;
+  font-family: "Inter", sans-serif;
+}
+
+header form .form_section .input_text:-ms-input-placeholder {
+  color: black;
+  font-family: "Inter", sans-serif;
+}
+
+header form .form_section .input_text::-ms-input-placeholder {
+  color: black;
+  font-family: "Inter", sans-serif;
+}
+
+header form .form_section .input_text::placeholder {
+  color: black;
+  font-family: "Inter", sans-serif;
+}
+
+header form .form_section .select-box {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+header form .form_section .select-box .options-container {
+  width: 184px;
+  top: 40px;
+  overflow: overlay;
+  height: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: absolute;
+  background-color: #fff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  gap: 20px;
+}
+
+header form .form_section .select-box .options-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+header form .form_section .select-box .options-container::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #d8d8d838;
+}
+
+header form .form_section .select-box .options-container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #D8D8D8;
+}
+
+header form .form_section .select-box .options-container .option {
+  width: 100%;
+}
+
+header form .form_section .select-box .options-container .option input {
+  display: none;
+}
+
+header form .form_section .select-box .options-container .option label {
+  width: 100%;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: "Inter", sans-serif;
+}
+
+header form .form_section .select-box .active {
+  height: 180px;
+  padding: 20px 10px 20px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header form .form_section .select-box .selected {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  height: 40px;
+  border-bottom: 1px solid #030406;
+  width: 181px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+header form .form_section .select-box .selected img {
+  display: block !important;
+  position: absolute;
+  right: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header form .form_section .select-box .selected-active img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+header form .form_section .select-box {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+header form .form_section .select-box .options-container2 {
+  width: 184px;
+  top: 40px;
+  overflow: overlay;
+  height: 0px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: absolute;
+  background-color: #fff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  gap: 20px;
+}
+
+header form .form_section .select-box .options-container2::-webkit-scrollbar {
+  width: 4px;
+}
+
+header form .form_section .select-box .options-container2::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #d8d8d838;
+}
+
+header form .form_section .select-box .options-container2::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #D8D8D8;
+}
+
+header form .form_section .select-box .options-container2 .option2 input {
+  display: none;
+}
+
+header form .form_section .select-box .options-container2 .option2 label {
+  cursor: pointer;
+  font-size: 13px;
+  font-family: "Inter", sans-serif;
+}
+
+header form .form_section .select-box .active2 {
+  height: 180px;
+  padding: 20px 10px 20px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header form .form_section .select-box .selected2 {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  height: 40px;
+  border-bottom: 1px solid #030406;
+  width: 181px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+header form .form_section .select-box .selected2 img {
+  display: block !important;
+  position: absolute;
+  right: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header form .form_section .select-box .selected-active2 img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+header form .form_section button {
+  width: 181px;
+  cursor: pointer;
+  height: 52px;
+  background-color: #eb5a35;
+  border-radius: 31px;
+  border: none;
+  color: #fff;
+  font-family: "myFont";
+  font-size: 14px;
+  font-weight: 400;
+}
+
+header .temp_options1 {
+  width: 80%;
+  margin-left: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 40px;
+}
+
+header .temp_options1 h4 {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Inter';
+  color: #030406;
+}
+
+header .temp_options1 .Button_removable {
+  margin-top: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .temp_options1 .Button_removable button {
+  font-size: 12px;
+  color: #fff;
+  font-weight: 400;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 30px;
+  padding: 10px 12px;
+  gap: 14px;
+  background-color: black;
+}
+
+header .temp_options1 .Button_removable button img {
+  cursor: pointer;
+}
+
+.info_section {
+  margin-top: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.info_section h4 {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "IBM Plex Mono", monospace;
+  color: #eb5a35;
+}
+
+.info_section h1 {
+  font-family: 'Inter';
+  margin-top: 20px;
+  font-size: 60px;
+  font-weight: 700;
+  color: #030406;
+  letter-spacing: -0.02em;
+  line-height: 64px;
+}
+
+.info_section p {
+  font-family: 'Inter';
+  font-size: 16px;
+  font-weight: 400;
+  color: #030406;
+  width: 400px;
+  margin-top: 22px;
+}
+
+.info_img_section {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 260px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 80px;
+}
+
+.info_img_section .img_container {
+  width: 50%;
+}
+
+.info_img_section .img_container img {
+  width: 100%;
+}
+
+.info_img_section .text_contianer {
+  width: 50%;
+}
+
+.info_img_section .text_contianer h4 {
+  font-size: 16px;
+  color: #030406;
+  font-weight: 500;
+  position: relative;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.info_img_section .text_contianer h4::after {
+  content: '';
+  bottom: -12px;
+  left: 0;
+  width: 44px;
+  height: 1px;
+  position: absolute;
+  background-color: #eb5a35;
+}
+
+.info_img_section .text_contianer h1 {
+  font-size: 48px;
+  color: #030406;
+  margin-top: 40px;
+  font-family: 'Inter';
+  font-weight: 500;
+  line-height: 58px;
+}
+
+.info_img_section .text_contianer p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Inter';
+  line-height: 26px;
+  margin-top: 22px;
+}
+
+.info_img_section .text_contianer img {
+  margin-top: 60px;
+  width: 116px;
+  height: 115px;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  header nav ul {
+    gap: 20px;
+  }
+  .form_section {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
